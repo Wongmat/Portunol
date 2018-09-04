@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Español - Portugués</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class ="header-block">
+    <a href = "./" class = "page-title">Traductor</a>
+    <div class = "search">
+      <form action = "/traducir" method = "get">
+        <input type="text" class="searchbar" name="q" placeholder="Quiero traducir..." required>
+        <input type="submit" class="submitButton" value="Buscar">
+      </form>
+    </div>
+    </div>
+    <div class="lower-body">
+      <div class ="definitions">
+      <h2 class = "palabra"><%- translation %></h2>
+      <h3 class = "espalabra"><%= searchTerm %></h3>
+      </div>
+      <hr>
+      <div class = "ejemplos">
+      <h3 class = "Ejemplos-div" style="font-size: 1.5em">Ejemplos:</h3>
+      <p class = "Ejemplos-cont"><% for (let i = 0; i < scrapeResult.length; i++) { %>
+        <%- scrapeResult[i] %><br><br>
+      <% }; %></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

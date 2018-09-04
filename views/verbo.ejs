@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Español - Portugués</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class ="header-block">
+    <a href = "./" class = "page-title">Traductor</a>
+    <div class = "search">
+      <form action = "/traducir" method = "get">
+        <input type="text" class="searchbar" name="q" placeholder="Quiero traducir..." required>
+        <input type="submit" class="submitButton" value="Buscar">
+      </form>
+  </div>
+  </div>
+    <div class="lower-body">
+      <div class ="definitions">
+      <h2 class = "palabra"><%- translation %></h2>
+      <h3 class = "espalabra"><%= searchTerm %></h3>
+      </div>
+      <hr>
+      <div class = "ejemplos">
+      <h3 class = "Ejemplos-div" style="font-size: 1.5em">Ejemplos:</h3>
+      <p class = "Ejemplos-cont"><% for (let i = 0; i < scrapeResult.length; i++) { %>
+        <%- scrapeResult[i] %><br><br>
+      <% }; %></p>
+      </div>
+      <div class = "tables">
+      <h4>Indicativo</h4>
+      <table border = "2" cellpadding = "1" id = "iTable">
+        <tbody id ="iTableBody"><tr><td></td><td>Presente</td><td>Pretérito perfeito</td><td>Pretérito imperfeito</td><td>Condicional</td><td>Futuro</td></tr>
+          <tr id="row1"><td>Eu</td><%- conjugacion[0] %></tr>
+          <tr id="row2"><td>Tu</td><%- conjugacion[1] %></tr>
+          <tr id="row3"><td>Ele/Ela</td><%- conjugacion[2] %></tr>
+          <tr id="row4"><td>Nós</td><%- conjugacion[3] %></tr>
+          <tr id="row5"><td>Vós</td><%- conjugacion[4] %></tr>
+          <tr id="row6"><td>Eles/Elas</td><%- conjugacion[5] %></tr>
+        </tbody></table>
+
+      <h4>Subjuntivo</h4>
+      <table border = "2" cellpadding = "1" id = "sTable">
+        <tbody id ="sTableBody"><tr><td></td><td>Presente</td><td>Pretérito imperfeito</td><td>Futuro</td></tr>
+          <tr id="row1"><td>Eu</td><%- conjugacion[6] %></tr>
+          <tr id="row2"><td>Tu</td><%- conjugacion[7] %></tr>
+          <tr id="row3"><td>Ele/Ela</td><%- conjugacion[8] %></tr>
+          <tr id="row4"><td>Nós</td><%- conjugacion[9] %></tr>
+          <tr id="row5"><td>Vós</td><%- conjugacion[10] %></tr>
+          <tr id="row6"><td>Eles/Elas</td><%- conjugacion[11] %></tr>
+        </tbody></table>
+    </div>
+
+
+  </div>
+</div>
+</body>
+
+</html>
