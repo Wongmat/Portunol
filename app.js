@@ -2,7 +2,7 @@ const express = require('express');
 const search = require('./search.js');
 const scraper = require('./scraper.js');
 const conjugacion = require('./conjugacion.js');
-const proxy = require('./proxy.js');
+const proxy = require('./Proxy.js');
 const main = express();
 
 proxy.start();
