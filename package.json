@@ -1,7 +1,8 @@
 {
-  "name": "portunhol",
+  "name": "portunol",
   "version": "1.0.0",
-  "homepage": "https://github.com/Wongmat/Portunol",
+  "description": "",
+  "main": "app.js",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.6.1",
@@ -11,8 +12,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wongmat/Portunol.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wongmat/Portunol/issues"
+  },
+  "homepage": "https://github.com/Wongmat/Portunol#readme"
 }
