@@ -70,4 +70,4 @@ res.render('general', {searchTerm: searchTerm, translation: translation, scrapeR
 });
 
 
-main.listen(process.env.PORT || 3000);
+main.listen(process.env.PORT || 80);
