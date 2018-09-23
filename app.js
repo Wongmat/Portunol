@@ -70,5 +70,5 @@ res.render('general', {searchTerm: searchTerm, translation: translation, scrapeR
 });
 
 
-main.listen(3000, () => {
-console.log("Server running on port 3000")});//process.env.PORT || 80);
+main.listen(process.env.PORT || 80, () => {
+console.log("Server running")});//process.env.PORT || 80);

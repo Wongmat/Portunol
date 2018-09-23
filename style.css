@@ -5,7 +5,6 @@ body {
 .i-header-block {
   height: 25em;
   background-color: orange;
-  min-width: 100%;
 }
 
 .title {
