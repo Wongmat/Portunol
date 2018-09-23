@@ -7,7 +7,7 @@ const main = express();
 
 proxy.start();
 main.set('view engine', 'ejs');
-main.set('views', './views');
+main.set('views', __dirname + '/views');
 main.use(express.static(__dirname));
 
 main.get('/', (req, res) => {
@@ -56,7 +56,7 @@ main.get('/traducir', async (req, res) => {
   }
 
   else if (result[0].hits[0].roms[0].headword_full.includes("noun") || result[0].hits[0].roms[0].arabs[0].header.includes("noun")) {
-  console.log(targetHTML);
+  console.log("Got here: " + targetHTML);
   let genero = targetHTML.match(/(?<=acronym title=")feminine|masculine/);
   genero = genero[0].replace(/e$/, "o");
   res.render('noun', {searchTerm: searchTerm, translation: translation, scrapeResult: scrapeResult, genero: genero});
@@ -70,4 +70,5 @@ res.render('general', {searchTerm: searchTerm, translation: translation, scrapeR
 });
 
 
-main.listen(process.env.PORT || 80);
+main.listen(3000, () => {
+console.log("Server running on port 3000")});//process.env.PORT || 80);
