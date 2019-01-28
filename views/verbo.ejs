@@ -5,58 +5,66 @@
   <title>Portuñol</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class ="header-block">
-    <a href = "./" class = "page-title">Portuñol</a>
-    <div class = "search">
-      <form action = "/traducir" method = "get">
-        <input type="text" class="searchbar" name="q" placeholder="Quiero traducir..." required>
-        <input type="submit" class="submitButton" value="Buscar">
-      </form>
-  </div>
-  </div>
-    <div class="lower-body">
-      <div class ="definitions">
-      <h2 class = "palabra"><%- translation %></h2>
-      <h3 class = "espalabra"><%= searchTerm %></h3>
+
+
+            <nav class="navbar navbar-expand-sm">
+                <a class="navbar-brand" href="./"><img src="logo.jpg" height="40em" width="100em"></a>
+                <form class="form-inline pb-2 col-12" action = "/traducir" method = "get">
+                  <input class="form-control mr-lg-2 col-9" name="q" type="text" placeholder="Quiero traducir..." required>
+                  <button type="submit" class="btn btn-dark p-lg-2">Traducir</button>
+                 </form></nav>
+
+                 <div class="container-fluid">
+    <div class="row">
+      <div class ="definitions col-12 border-bottom">
+      <h1 class = "palabra display-2 ml-2"><b><%- translation %></b></h1>
+      <h1 class = "espalabra display-4 ml-2"><%= searchTerm %></h1>
       </div>
-      <hr>
-      <div class = "ejemplos">
-      <h3 class = "Ejemplos-div" style="font-size: 1.5em">Ejemplos:</h3>
-      <p class = "Ejemplos-cont"><% for (let i = 0; i < scrapeResult.length; i++) { %>
+    </div>
+      <div class = "ejemplos border-bottom row mt-3">
+      <h3 class="col-12">Ejemplos:</h3>
+      <p class = "Ejemplos-cont m-2 col-12"><% for (let i = 0; i < scrapeResult.length; i++) { %>
         <%- scrapeResult[i] %><br><br>
       <% }; %></p>
       </div>
-      <div class = "tables">
-      <h4>Indicativo</h4>
-      <table border = "2" cellpadding = "1" id = "iTable">
-        <tbody id ="iTableBody"><tr><td></td><td>Presente</td><td>Pretérito perfeito</td><td>Pretérito imperfeito</td><td>Condicional</td><td>Futuro</td></tr>
-          <tr id="row1"><td>Eu</td><%- conjugacion[0] %></tr>
-          <tr id="row2"><td>Tu</td><%- conjugacion[1] %></tr>
-          <tr id="row3"><td>Ele/Ela</td><%- conjugacion[2] %></tr>
-          <tr id="row4"><td>Nós</td><%- conjugacion[3] %></tr>
-          <tr id="row5"><td>Vós</td><%- conjugacion[4] %></tr>
-          <tr id="row6"><td>Eles/Elas</td><%- conjugacion[5] %></tr>
+      <div class = "tables row mt-3">
+          <h3 class="col-12">Indicativo:</h3>
+          <div class="col-11 table-responsive-sm">
+      <table class="table" id = "iTable">
+        <tbody id ="iTableBody"><tr><th></th><th>Presente</th><th>Pretérito perfeito</th><th>Pretérito imperfeito</th><th>Condicional</th><th>Futuro</th></tr>
+          <tr id="row1"><th>Eu</th><%- conjugacion[0] %></tr>
+          <tr id="row2"><th>Tu</th><%- conjugacion[1] %></tr>
+          <tr id="row3"><th>Ele/Ela</th><%- conjugacion[2] %></tr>
+          <tr id="row4"><th>Nós</th><%- conjugacion[3] %></tr>
+          <tr id="row5"><th>Vós</th><%- conjugacion[4] %></tr>
+          <tr id="row6"><th>Eles/Elas</th><%- conjugacion[5] %></tr>
         </tbody></table>
+      </div>
 
-      <h4>Subjuntivo</h4>
-      <table border = "2" cellpadding = "1" id = "sTable">
-        <tbody id ="sTableBody"><tr><td></td><td>Presente</td><td>Pretérito imperfeito</td><td>Futuro</td></tr>
-          <tr id="row1"><td>Eu</td><%- conjugacion[6] %></tr>
-          <tr id="row2"><td>Tu</td><%- conjugacion[7] %></tr>
-          <tr id="row3"><td>Ele/Ela</td><%- conjugacion[8] %></tr>
-          <tr id="row4"><td>Nós</td><%- conjugacion[9] %></tr>
-          <tr id="row5"><td>Vós</td><%- conjugacion[10] %></tr>
-          <tr id="row6"><td>Eles/Elas</td><%- conjugacion[11] %></tr>
+      <h3 class="col-12">Subjuntivo:</h3>
+      <div class="col-11">
+      <table class="table" id = "iTable">
+        <tbody id ="sTableBody"><tr><th></th><th>Presente</th><th>Pretérito imperfeito</th><th>Futuro</th></tr>
+          <tr id="row1"><th>Eu</th><%- conjugacion[6] %></tr>
+          <tr id="row2"><th>Tu</th><%- conjugacion[7] %></tr>
+          <tr id="row3"><th>Ele/Ela</th><%- conjugacion[8] %></tr>
+          <tr id="row4"><th>Nós</th><%- conjugacion[9] %></tr>
+          <tr id="row5"><th>Vós</th><%- conjugacion[10] %></tr>
+          <tr id="row6"><th>Eles/Elas</th><%- conjugacion[11] %></tr>
         </tbody></table>
-    </div>
+    </div></div>
 
 
 </div>
+</div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
