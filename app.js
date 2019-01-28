@@ -16,7 +16,8 @@ main.get('/', (req, res) => {
 
 main.get('/traducir', async (req, res) => {
   let result = "";
-  let searchTerm = req.query.q.toLowerCase();
+  let searchTerm = req.query.q;
+  searchTerm = searchTerm.toLowerCase();
   try {
   result = await search.ajax(searchTerm);
 } catch (err) {
