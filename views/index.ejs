@@ -5,36 +5,32 @@
   <title>Portuñol</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
 </head>
 
 <body>
-    <div class ="i-header-block">
-      <svg viewBox ="199 35 100 25">
-      <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" fill="transparent" />
-      <text class="title">
-        <textPath xlink:href="#curve">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Portuñol
-        </textPath>
-      </text>
-    </svg>
-    <div class = "iSearch">
-      <form action = "/traducir" method = "get">
-        <input type="text" class="iSearchbar" name="q" placeholder="Quiero traducir..." required>
-        <input type="submit" class="iSubmitButton" value="Buscar">
-      </form>
-  </div>
-  </div>
-    <div class="i-lower-body">
-      <br>
-      <h3 style = "text-align: center; text-transform: none">Bienvenido al único traductor que necesitas para aprender Portugués!</h2>
+    <div class="container-fluid">
+    <div class ="row title-block  justify-content-center">
+            <div class="col-md-7 col-12 p-md-8">
+            <img src="logo.jpg" class="img-fluid">
+            </div>
+        </div>
+            <div class="row title-block justify-content-center">
+            <form class="form-inline col-12 pb-2" action = "/traducir" method = "get">
+            <input class="form-control form-control-lg mr-2 col-md-10 ml-2" name="q" type="text" placeholder="Quiero traducir..." required>
+            <button type="submit" class="btn btn-dark col-md-1 col-10 offset-md-0 offset-1 mt-2 p-md-2">Traducir</button>
+           </form>
+        </div>
+    </div>
 
-  </div>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <div class="row">
+      <h2 class="text-center col-12 mt-5">Bienvenido al único traductor que necesitas para aprender Portugués!</h2>
+      </div>
+      </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>

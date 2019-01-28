@@ -11,7 +11,7 @@ main.set('views', __dirname + '/views');
 main.use(express.static(__dirname));
 
 main.get('/', (req, res) => {
-  res.render('index2');
+  res.render('index');
 });
 
 main.get('/traducir', async (req, res) => {
