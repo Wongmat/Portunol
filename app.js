@@ -71,5 +71,5 @@ res.render('general', {searchTerm: searchTerm, translation: translation, scrapeR
 });
 
 
-main.listen(process.env.PORT || 443, () => {
+main.listen(process.env.PORT || 1337, () => {
 console.log("Server running")});//process.env.PORT || 80);
