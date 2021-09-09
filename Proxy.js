@@ -1,10 +1,10 @@
 const http = require('http');
 const https = require('https');
 
-let apiHost='api.pons.com';
+let apiHost=
 let apiPort=443;
 
-let mySecret='c80a160e5c7245b876b8901ef2dce904c82d892c8f7475396362c1e11ac6cf12';
+let mySecret=
 let myPort=8080;
 
 exports.start = () => {
